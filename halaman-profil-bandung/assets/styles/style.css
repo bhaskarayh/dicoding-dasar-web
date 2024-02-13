@@ -13,30 +13,12 @@ h3 {
     color: #00a2c6;
 }
 
-body > header {
+footer {
+    padding: 20px;
     color: white;
-    display: inline;
-
+    background-color: #00a2c6;
     text-align: center;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.jumbotron {
-    font-size: 20px;
-    background-color: #00c6f3;
-    padding: 60px;
-    text-align: center;
-}
-
-.jumbotron h1 {
-    font-size: 50px;
+    font-weight: bold;
 }
 
 /* Sticky Positioning */
@@ -50,6 +32,7 @@ nav {
 
 nav ul {
     display: flex;
+    gap: 2rem;
     justify-content: space-evenly;
     padding: 5px 0;
 }
@@ -64,19 +47,37 @@ nav a:hover {
     font-weight: bold;
 }
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.jumbotron {
+    font-size: 20px;
+    background-color: #00c8eb;
+    padding: 60px;
+    text-align: center;
+}
+
+.jumbotron h1 {
+    font-size: 50px;
+}
+
+header {
+    color: white;
+    display: inline;
+
+    text-align: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
 header ul {
     list-style-type: none;
 }
 header ul li a {
     text-decoration: none;
-}
-
-footer {
-    padding: 20px;
-    color: white;
-    background-color: #00a2c6;
-    text-align: center;
-    font-weight: bold;
 }
 
 table tr th {
@@ -85,10 +86,7 @@ table tr th {
 }
 
 aside {
-    float: right;
-    width: 25%;
-    /* margin: 20px 0; */
-    padding-left: 20px;
+    flex: 1;
 }
 
 aside header {
@@ -103,13 +101,19 @@ aside section {
     margin: auto 0px;
     gap: 2em;
 }
+
 aside img {
     width: 200px;
 }
 
+.profile img {
+    max-width: 200px;
+}
+
 main {
     padding: 20px;
-    overflow: auto;
+    display: flex;
+    gap: 1.5rem;
 }
 
 .featured-image {
@@ -128,20 +132,27 @@ main {
 }
 
 #content {
-    margin: 20px 0;
-    width: 75%;
+    flex: 5;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    float: left;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+/* PC Reso rendah */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
 }
 
 /* Untuk HP */
-@media screen and (max-width: 1000px) {
-    #content,
-    aside {
-        width: 100%;
-        padding: 0;
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main aside {
+        align-self: strech;
     }
 }
