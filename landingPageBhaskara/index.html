@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -21,336 +22,604 @@
     <header class="navbar-container">
         <div class="logo"><img src="assets/img/hd_logo.svg" alt="Hasu no Sora"></div>
 
-        <nav class="nav-list">
+        <nav class="nav-list" id="nav-list">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">Home</a></li>
                 <li><a href="#characters">Characters</a></li>
-                <li><a href="#">Subunit</a></li>
-                <li><a href="#">Source</a></li>
+                <li><a href="#subunit">Subunit</a></li>
+                <!-- <li><a href="#">Source</a></li> -->
             </ul>
+        </nav>
+        <nav class="nav-list-hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </nav>
     </header>
 
-    <main class="container">
+    <main>
         <div class="content">
+            <!-- About -->
             <article id="about" class="card">
                 <p>Hasunosora Girls' High School Idol Club (蓮ノ空女学院スクールアイドルクラブ) is the collective name of 6
-                    virtual school idols from Hasunosora Girls' High School that are a part of a smart phone application
+                    virtual school idols from Hasunosora Girls' High School that are a part of a smart phone
+                    application
                     which was launched on April 15, 2023.</p>
-                <img src="assets/img/Link_Like_Love_Live_key_visual.webp" alt="Hasu no Sora Key Visual">
+                <img src="assets/img/main_kv.webp" alt="Hasu no Sora Key Visual">
             </article>
 
-            <article id="characters-modal" class="">
-                <!-- Kaho -->
-                <div class="card">
-                    <h5 class="title">Kaho Hoshita</h5>
-                    <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
-                    <!-- <button>See Detail</button> -->
-                </div>
-                <div class="card">
-                    <h5 class="title">Kaho Hoshita</h5>
-                    <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
-                    <!-- <button>See Detail</button> -->
-                </div>
-                <div class="card">
-                    <h5 class="title">Kaho Hoshita</h5>
-                    <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
-                    <!-- <button>See Detail</button> -->
-                </div>
-                <div class="card">
-                    <h5 class="title">Kaho Hoshita</h5>
-                    <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
-                    <!-- <button>See Detail</button> -->
-                </div>
-                <div class="card">
-                    <h5 class="title">Kaho Hoshita</h5>
-                    <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
-                    <!-- <button>See Detail</button> -->
-                </div>
-                <div class="card">
-                    <h5 class="title">Kaho Hoshita</h5>
-                    <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
-                    <!-- <button>See Detail</button> -->
-                </div>
-            </article>
+            <!-- Characters -->
+            <div class="container">
+                <article id="characters" class="">
+                    <div id="character-list">
+                        <h2>Characters</h2>
+                        <ul>
+                            <li class="active" id="list-kaho-hoshita">
+                                <img src="assets/img/thumb/01_thumb.png" alt="Kaho Hinoshita">
+                            </li>
+                            <li id="list-kozue-otomune">
+                                <img src="assets/img/thumb/03_thumb.png" alt="Kozue Otomune">
+                            </li>
+                            <li id="list-sayaka-murano">
+                                <img src="assets/img/thumb/02_thumb.png" alt="Kaho Hinoshita">
+                            </li>
+                            <li id="list-tsuzuri-yugiri"> <img src="assets/img/thumb/04_thumb.png" alt="Kaho Hinoshita">
+                            </li>
+                            <li id="list-rurino-osawa"> <img src="assets/img/thumb/05_thumb.png" alt="Kaho Hinoshita">
+                            </li>
+                            <li id="list-megumi-fujishima"> <img src="assets/img/thumb/06_thumb.png"
+                                    alt="Kaho Hinoshita">
+                            </li>
+                            <li id="list-ginko-momose"> <img src="assets/img/thumb/07_thumb.png" alt="Kaho Hinoshita">
+                            </li>
+                            <li id="list-kosuzu-kachimachi"> <img src="assets/img/thumb/08_thumb.png"
+                                    alt="Kaho Hinoshita">
+                            </li>
+                            <li id="list-hime-anyoji"> <img src="assets/img/thumb/09_thumb.png" alt="Kaho Hinoshita">
+                            </li>
 
-
-            <article id="characters" class="">
-                <!-- Kaho -->
-                <div id="kaho-hoshita" class="card">
-                    <h5 class="title">Kaho Hoshita</h5>
-                    <div class="main-content">
-                        <p>Kaho Hinoshita is a main character in Link! Like! Love Live!. She is a first year student at
-                            Hasunosora Girls' High School. She is a member of Cerise Bouquet, a unit under the
-                            Hasunosora
-                            Girls' High School Idol Club. Her image color is sun yellow.</p>
-                        <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
+                        </ul>
                     </div>
 
-                    <div class="side-content">
-                        <table>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Character</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>日野下 花帆</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>
-                                    Hinoshita Kaho</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Voice Actress</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>楡井 希実</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>Nirei Nozomi</td>
-                            </tr>
-                        </table>
+                    <div id="character-card">
+                        <!-- Kaho -->
+                        <div id="kaho-hoshita" class="card active">
+                            <h5 class="title">Kaho Hoshita</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Kaho Hinoshita is a main character in Link! Like! Love Live!. She is a first year
+                                    student
+                                    at
+                                    Hasunosora Girls' High School. She is a member of Cerise Bouquet, a unit under the
+                                    Hasunosora
+                                    Girls' High School Idol Club. Her image color is sun yellow.</p>
+                                <img src="assets/img/Kaho_Hinoshita.webp" alt="Kaho Hinoshita">
+                            </div>
 
-                        <img src="assets/img/Kaho_Logo.webp" alt="Kaho Logo">
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>日野下 花帆</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>
+                                            Hinoshita Kaho</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>楡井 希実</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Nirei Nozomi</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Kaho_Logo.webp" alt="Kaho Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+                        <!-- Kozue -->
+                        <div id="kozue-otomune" class="card ">
+                            <h5 class="title">Kozue Otomune</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Kozue Otomune is a main character in Link! Like! Love Live!. She is a second year
+                                    student
+                                    at
+                                    Hasunosora Girls' High School. She is a member of Cerise Bouquet, a unit under the
+                                    Hasunosora Girls' High School Idol Club. Her image color is mermaid green.</p>
+                                <img src="assets/img/Kozue_Otomune.webp" alt="Kozue Otomune">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>乙宗 梢</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>
+                                            Otomune Kozue</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>
+                                            花宮 初奈</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Hanamiya Nina</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Kozue_Logo.webp" alt="Kozue Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+                        <!-- Sayaka -->
+                        <div id="sayaka-murano" class="card">
+                            <h5 class="title">Sayaka Murano</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Sayaka Murano is a main character in Link! Like! Love Live!. She is a first year
+                                    student
+                                    at
+                                    Hasunosora Girls' High School. She is a member of DOLLCHESTRA, a unit under the
+                                    Hasunosora
+                                    Girls' High School Idol Club. Her image color is ice blue.</p>
+                                <img src="assets/img/Sayaka_Murano.webp" alt="Sayaka Murano">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>村野 さやか</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td> Sayaka Murano</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>野中 ここな</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>
+                                            Nonaka Kokona</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Sayaka_Logo.webp" alt="Sayaka Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+                        <!-- Tsuzuri -->
+                        <div id="tsuzuri-yugiri" class="card">
+                            <h5 class="title">Tsuzuri Yugiri</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Tsuzuri Yugiri is a main character in Link! Like! Love Live!. She is a second year
+                                    student at
+                                    Hasunosora Girls' High School. She is a member of DOLLCHESTRA, a unit under the
+                                    Hasunosora
+                                    Girls' High School Idol Club. Her image color is my red.</p>
+                                <img src="assets/img/Tsuzuri_Yugiri.webp" alt="Tsuzuri Yugiri">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>夕霧 綴理</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Yugiri Tsuzuri</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>佐々木 琴子</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Sasaki Kotoko</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Tsuzuri_Logo.webp" alt="Tsuzuri Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+                        <!-- Rurino -->
+                        <div id="rurino-osawa" class="card">
+                            <h5 class="title">Rurino Osawa</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Rurino Osawa is a main character in Link! Like! Love Live!. She is a first year
+                                    student
+                                    at
+                                    Hasunosora Girls' High School. She is a member of Mira-Cra Park!, a unit under the
+                                    Hasunosora Girls' High School Idol Club. Her image color is ruri pink.</p>
+                                <img src="assets/img/Rurino_Osawa.webp" alt="Rurino Osawa">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>大沢 瑠璃乃</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Osawa Rurino</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header">
+                                            Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>菅 叶和</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>
+                                            Kan Kanna</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Rurino_Logo.webp" alt="Rurino Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+                        <!-- Fujishima Megumi -->
+                        <div id="megumi-fujishima" class="card">
+                            <h5 class="title">Megumi Fujishima</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Megumi Fujishima is a main character in Link! Like! Love Live!. She is a second year
+                                    student
+                                    at Hasunosora Girls' High School. She is a member of Mira-Cra Park!, a unit under
+                                    the
+                                    Hasunosora Girls' High School Idol Club. Her image color is angel white.</p>
+                                <img src="assets/img/Megumi_Fujishima.webp" alt="Megumi Fujishima">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>藤島 慈</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td> Fujishima Megumi</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>月音 こな</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td> Tsukine Kona</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Megumi_Logo.webp" alt="Megumi Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+
+                        <!-- Ginko Momose -->
+                        <div id="ginko-momose" class="card">
+                            <h5 class="title">Ginko Momose</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Ginko Momose is a main character in Link! Like! Love Live!. She is currently a first
+                                    year
+                                    student at Hasunosora Girls' High School. She is a member of Cerise Bouquet, a unit
+                                    under the Hasunosora Girls' High School Idol Club.</p>
+                                <img src="assets/img/Ginko_Momose_2024.webp" alt="Ginko Momose">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>百生 吟子</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Momose Ginko</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>櫻井陽菜</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>
+                                            Sakurai Hina</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Ginko_Momose_Logo.webp" alt="Ginko Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+                        <!-- Kosuzu Kachimachi -->
+                        <div id="kosuzu-kachimachi" class="card">
+                            <h5 class="title">Kosuzu Kachimachi</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Kosuzu Kachimachi is a main character in Link! Like! Love Live!. She is currently a
+                                    first
+                                    year student at Hasunosora Girls' High School. She is a member of DOLLCHESTRA, a
+                                    unit
+                                    under the Hasunosora Girls' High School Idol Club.</p>
+                                <img src="assets/img/Kosuzu_Kachimachi_2024.webp" alt="Kosuzu Kachimachi">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>徒町 小鈴</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Kachimachi Kosuzu</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>葉山風花</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>
+                                            Hayama Fuka</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Kosuzu_Kachimachi_Logo.webp" alt="Kosuzu Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
+                        <!-- Hime Anyoji -->
+                        <div id="hime-anyoji" class="card">
+                            <h5 class="title">Hime Anyoji</h5>
+                            <div class="main-content fadeInLeft">
+                                <p>Hime Anyoji is a main character in Link! Like! Love Live!. She is currently a first
+                                    year
+                                    student at Hasunosora Girls' High School. She is a member of Mira-Cra Park!, a unit
+                                    under the Hasunosora Girls' High School Idol Club.</p>
+                                <img src="assets/img/Hime_Anyoji_2024.webp" alt="Kosuzu Kachimachi">
+                            </div>
+
+                            <div class="side-content fadeInRight">
+                                <table>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Character</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>安養寺 姫芽</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Anyoji Hime</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2" class="table-header"> Voice Actress</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Kanji</th>
+                                        <td>
+                                            来栖りん</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Romaji</th>
+                                        <td>Rin Kurusu</td>
+                                    </tr>
+                                </table>
+
+                                <img src="assets/img/Hime_Anyoji_Logo.webp" alt="Kosuzu Logo">
+                            </div>
+
+                            <!-- <button>See Detail</button> -->
+                        </div>
+
                     </div>
 
-                    <!-- <button>See Detail</button> -->
-                </div>
+                </article>
+            </div>
 
-                <!-- Kozue -->
-                <div id="kozue-otomune" class="card">
-                    <h5 class="title">Kozue Otomune</h5>
-                    <div class="main-content">
-                        <p>Kozue Otomune is a main character in Link! Like! Love Live!. She is a second year student at
-                            Hasunosora Girls' High School. She is a member of Cerise Bouquet, a unit under the
-                            Hasunosora Girls' High School Idol Club. Her image color is mermaid green.</p>
-                        <img src="assets/img/Kozue_Otomune.webp" alt="Kozue Otomune">
+            <!-- Gap -->
+            <div class="school-bg">
+            </div>
+
+            <!-- Subunit -->
+            <div class="container">
+                <article id="subunit" class="">
+                    <h2>Subunit</h2>
+
+                    <div class="carousel">
+                        <!-- Cerise Bouquet -->
+                        <div class="subunit-list card fadeIn" id="cerise-bouquet">
+                            <div class="main-content fadeInLeft">
+                                <h5 class="title">Cerise Bouquet</h5>
+                                <p>Cerise Bouquet is a unit under Hasunosora Girls' High School Idol Club. The unit
+                                    consists
+                                    of
+                                    two members, namely Kaho Hinoshita and Kozue Otomune. They debuted with the song
+                                    Suisai
+                                    Sekai. Their unit color is rosé.</p>
+                            </div>
+                            <div class="img-container">
+                                <img src="assets/img/Cerise_Bouquet.webp" alt="Cerise Bouquet">
+                            </div>
+                        </div>
+                        <!-- Cerise Bouquet -->
+                        <div class="subunit-list card fadeIn" id="dollchestra">
+                            <div class="main-content fadeInLeft">
+                                <h5 class="title">Dollchestra</h5>
+                                <p>DOLLCHESTRA is a unit under Hasunosora Girls' High School Idol Club. The unit
+                                    consists of three members, namely Sayaka Murano, Tsuzuri Yugiri and Kosuzu
+                                    Kachimachi. They debuted with the song AWOKE. Their unit color is blue.</p>
+                            </div>
+                            <div class="img-container">
+                                <img src="assets/img/DOLLCHESTRA.webp" alt="Dollchestra">
+                            </div>
+                        </div>
+                        <!-- Cerise Bouquet -->
+                        <div class="subunit-list card fadeIn" id="mira-cra_park">
+                            <div class="main-content fadeInLeft">
+                                <h5 class="title">Mira-Cra Park!</h5>
+                                <p>Mira-Cra Park! is a unit under Hasunosora Girls' High School Idol Club. The unit
+                                    consists of three members, namely Rurino Osawa, Megumi Fujishima and Hime Anyoji.
+                                    They debuted with the song Do! Do! Do!. Their unit color is yellow.</p>
+                            </div>
+                            <div class="img-container">
+                                <img src="assets/img/Mira-Cra_Park.webp" alt="Mira-Cra Park!">
+                            </div>
+                        </div>
+
+
+                        <!-- <div class="carousel__nav">
+                            <span class="carousel__button carousel__button--selected"></span>
+                            <span class="carousel__button "></span>
+                            <span class="carousel__button"></span>
+                        </div> -->
+
+                        <div class="carousel__nav__arrow">
+                            <span class="carousel__nav__arrow_left"><i class="fa fa-arrow-circle-left"></i></span>
+                            <span class="carousel__nav__arrow_right"><i class="fa fa-arrow-circle-right"></i></span>
+                        </div>
                     </div>
 
-                    <div class="side-content">
-                        <table>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Character</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>乙宗 梢</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>
-                                    Otomune Kozue</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Voice Actress</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>
-                                    花宮 初奈</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>Hanamiya Nina</td>
-                            </tr>
-                        </table>
 
-                        <img src="assets/img/Kozue_Logo.webp" alt="Kozue Logo">
-                    </div>
 
-                    <!-- <button>See Detail</button> -->
-                </div>
+                </article>
 
-                <!-- Sayaka -->
-                <div id="sayaka-murano" class="card">
-                    <h5 class="title">Sayaka Murano</h5>
-                    <div class="main-content">
-                        <p>Sayaka Murano is a main character in Link! Like! Love Live!. She is a first year student at
-                            Hasunosora Girls' High School. She is a member of DOLLCHESTRA, a unit under the Hasunosora
-                            Girls' High School Idol Club. Her image color is ice blue.</p>
-                        <img src="assets/img/Sayaka_Murano.webp" alt="Sayaka Murano">
-                    </div>
 
-                    <div class="side-content">
-                        <table>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Character</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>村野 さやか</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td> Sayaka Murano</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Voice Actress</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>野中 ここな</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>
-                                    Nonaka Kokona</td>
-                            </tr>
-                        </table>
+            </div>
 
-                        <img src="assets/img/Sayaka_Logo.webp" alt="Sayaka Logo">
-                    </div>
-
-                    <!-- <button>See Detail</button> -->
-                </div>
-
-                <!-- Tsuzuri -->
-                <div id="tsuzuri-yugiri" class="card">
-                    <h5 class="title">Tsuzuri Yugiri</h5>
-                    <div class="main-content">
-                        <p>Tsuzuri Yugiri is a main character in Link! Like! Love Live!. She is a second year student at
-                            Hasunosora Girls' High School. She is a member of DOLLCHESTRA, a unit under the Hasunosora
-                            Girls' High School Idol Club. Her image color is my red.</p>
-                        <img src="assets/img/Tsuzuri_Yugiri.webp" alt="Tsuzuri Yugiri">
-                    </div>
-
-                    <div class="side-content">
-                        <table>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Character</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>夕霧 綴理</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>Yugiri Tsuzuri</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Voice Actress</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>佐々木 琴子</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>Sasaki Kotoko</td>
-                            </tr>
-                        </table>
-
-                        <img src="assets/img/Tsuzuri_Logo.webp" alt="Tsuzuri Logo">
-                    </div>
-
-                    <!-- <button>See Detail</button> -->
-                </div>
-
-                <!-- Rurino -->
-                <div id="rurino-osawa" class="card">
-                    <h5 class="title">Rurino Osawa</h5>
-                    <div class="main-content">
-                        <p>Rurino Osawa is a main character in Link! Like! Love Live!. She is a first year student at
-                            Hasunosora Girls' High School. She is a member of Mira-Cra Park!, a unit under the
-                            Hasunosora Girls' High School Idol Club. Her image color is ruri pink.</p>
-                        <img src="assets/img/Rurino_Osawa.webp" alt="Rurino Osawa">
-                    </div>
-
-                    <div class="side-content">
-                        <table>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Character</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>大沢 瑠璃乃</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>Osawa Rurino</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="table-header">
-                                    Voice Actress</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>菅 叶和</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td>
-                                    Kan Kanna</td>
-                            </tr>
-                        </table>
-
-                        <img src="assets/img/Rurino_Logo.webp" alt="Rurino Logo">
-                    </div>
-
-                    <!-- <button>See Detail</button> -->
-                </div>
-
-                <!-- Megumi -->
-                <div id="rurino-osawa" class="card">
-                    <h5 class="title">Megumi Fujishima</h5>
-                    <div class="main-content">
-                        <p>Megumi Fujishima is a main character in Link! Like! Love Live!. She is a second year student
-                            at Hasunosora Girls' High School. She is a member of Mira-Cra Park!, a unit under the
-                            Hasunosora Girls' High School Idol Club. Her image color is angel white.</p>
-                        <img src="assets/img/Megumi_Fujishima.webp" alt="Megumi Fujishima">
-                    </div>
-
-                    <div class="side-content">
-                        <table>
-                            <tr>
-                                <th colspan="2" class="table-header"> Character</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>藤島 慈</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td> Fujishima Megumi</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2" class="table-header"> Voice Actress</th>
-                            </tr>
-                            <tr>
-                                <th>Kanji</th>
-                                <td>月音 こな</td>
-                            </tr>
-                            <tr>
-                                <th>Romaji</th>
-                                <td> Tsukine Kona</td>
-                            </tr>
-                        </table>
-
-                        <img src="assets/img/Megumi_Logo.webp" alt="Megumi Logo">
-                    </div>
-
-                    <!-- <button>See Detail</button> -->
-                </div>
-
-            </article>
         </div>
+
+        <aside class="">
+            <section id="source">
+                <h2>Source</h2>
+                <ul>
+                    <li><a href="https://www.lovelive-anime.jp/hasunosora/news/"
+                            target="_blank">https://www.lovelive-anime.jp/hasunosora/news/</a>
+                    </li>
+                    <li><a href="https://love-live.fandom.com/wiki/Hasunosora_Girls%27_High_School_Idol_Club"
+                            target="_blank">https://love-live.fandom.com/wiki/Hasunosora_Girls%27_High_School_Idol_Club</a>
+                    </li>
+                </ul>
+                <div id="gambar">
+                    <img src="assets/img/main_kv.webp" alt="Hasu no Sora Key Visual">
+                </div>
+            </section>
+            <section id="social-media">
+                <ul>
+                    <li><a href="https://www.youtube.com/@lovelive_hasu" target="_blank">
+                            <i class="fa fa-youtube-play"></i> <span>@lovelive_hasu</span>
+                        </a></li>
+                    <li><a href="https://twitter.com/hasunosora_SIC" target="_blank"><i
+                                class=" fa fa-twitter"></i><span>@hasunosora_SIC</span></a></li>
+                    <li><a href="https://note.com/lovelive_hasu" target="_blank"><svg width="70" height="15"
+                                viewBox="0 0 98 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M60.3377 0.0205078H65.3607V5.41256H70.5272V10.128H65.3607V15.7251H60.3377V10.128H55.1711V5.41256H60.3377V0.0205078Z"
+                                    fill="black"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M27.8419 11.5017C27.8419 6.15065 32.1678 1.8042 37.4778 1.8042C42.7879 1.8042 47.1138 6.15065 47.1138 11.5017C47.1138 16.8527 42.7879 21.1992 37.4778 21.1992C32.1678 21.1992 27.8419 16.8527 27.8419 11.5017ZM32.4343 11.4812C32.4343 14.29 34.6896 16.5657 37.4778 16.5657C40.2661 16.5657 42.5214 14.3105 42.5214 11.4812C42.5214 8.67241 40.2661 6.39667 37.4778 6.39667C34.6896 6.39667 32.4343 8.67241 32.4343 11.4812Z"
+                                    fill="black"></path>
+                                <path
+                                    d="M4.87829 1.90517C7.57364 1.85514 10.3765 1.80312 12.6293 1.86569C17.5908 1.98871 19.4565 4.14143 19.5385 9.49247C19.6 12.5063 19.5385 21.1582 19.5385 21.1582H14.167C14.167 17.9452 14.1743 15.8712 14.1797 14.3661C14.187 12.3278 14.1905 11.332 14.167 9.96402C14.1054 7.87281 13.5109 6.8682 11.8912 6.68368C10.169 6.47866 5.39206 6.64268 5.39206 6.64268V21.1582H0.0205078V1.9682C1.48206 1.9682 3.15828 1.93709 4.87829 1.90517Z"
+                                    fill="black"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M97.877 11.5017C97.877 6.15065 93.5511 1.8042 88.241 1.8042C82.931 1.8042 78.605 6.15065 78.605 11.5017C78.605 14.6385 80.0402 17.3243 82.2749 19.108C83.8331 20.3381 86.0063 21.1992 88.9176 21.1992C90.3322 21.1992 94.0021 20.8096 96.6469 17.8778L94.4736 14.9665C93.5511 15.7866 91.2343 16.9347 89.3891 16.9347C87.0519 16.9347 85.6373 16.4837 84.6122 15.5201C83.9766 14.946 83.5255 14.0645 83.3205 12.9778H97.7335C97.8155 12.4858 97.877 12.0142 97.877 11.5017ZM83.3615 9.73851C83.8946 7.46278 85.4937 5.78161 88.2205 5.78161C91.0703 5.78161 92.567 7.58579 93.059 9.73851H83.3615Z"
+                                    fill="black"></path>
+                            </svg>
+                            <span>lovelive_hasu</span></a></li>
+                </ul>
+            </section>
+        </aside>
     </main>
 
-    <!-- <footer>
+    <footer>
         <p>Belajar Dasar Pemrograman Web &#169; 2024, Bhaskara</p>
-    </footer> -->
+    </footer>
 
     <script src="assets/js/script.js"></script>
 </body>
