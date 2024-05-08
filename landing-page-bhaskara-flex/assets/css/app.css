@@ -1,0 +1,1010 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+    --kaho-color: #f39600;
+    --kozue-color: #16ad69;
+    --sayaka-color: #3987c8;
+    --tsuzuri-color: #e70112;
+    --rurino-color: #e6007f;
+    --megumi-color: #e5e4e7;
+    --ginko-color: #a2d7dd;
+    --kosuzu-color: #fad764;
+    --hime-color: #9d8de2;
+    --hasu-logo-color: #be1400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+header.navbar-container {
+    width: 100%;
+    /* max-width: 1200px; */
+    padding-block: 1rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+
+    /* position: absolute; */
+    /* z-index: 999; */
+}
+
+header.navbar-container nav.nav-list-hamburger {
+    display: none;
+}
+
+header.navbar-container .logo img {
+    height: 50px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--hasu-logo-color);
+
+    transform: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li a:hover {
+    background-color: var(--hasu-logo-color);
+    color: white;
+}
+
+header.navbar-container .nav-list li a.active {
+    background-color: var(--hasu-logo-color);
+    color: white;
+}
+
+/* Navbar Fixed */
+.navbar-fixed {
+    position: fixed !important;
+    box-shadow: inset 0 -1px 0 0 rgba(var(--hasu-logo-color), 0.2);
+    top: 0;
+    left: 0;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    backdrop-filter: blur(8px);
+    z-index: 999;
+}
+
+/* Main */
+main div.content article {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 4rem;
+}
+
+main div.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 10rem;
+}
+
+main div article#about {
+    display: flex;
+    align-items: center;
+
+    margin: 20px auto;
+    width: 80%;
+
+    /* background-color: var(--hasu-logo-color); */
+    /* background-color: rgba(var(--hasu-logo-color), 0.5); */
+    overflow: hidden;
+    padding: 20px;
+    gap: 2rem;
+}
+main div article#about p {
+    font-size: 1.5rem;
+    text-align: justify;
+    /* color: white; */
+}
+
+main div article#about img {
+    height: 500px;
+}
+
+/* Characters */
+main div article#characters {
+    display: flex;
+    justify-content: center;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-auto-rows: 1fr; */
+
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    align-items: center;
+
+    /* background-color: #be1400; */
+}
+
+main div article#characters div#character-list > h2 {
+    text-align: center;
+    color: var(--hasu-logo-color);
+    font-size: 3em;
+}
+
+main div article#characters div#character-list ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+main div article#characters div#character-list ul li {
+    height: 80px;
+    width: 80px;
+    /* background-color: cadetblue; */
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 10px;
+    line-height: 1;
+    border-radius: 50%;
+    white-space: nowrap;
+    cursor: pointer;
+    /* border: 4px solid; */
+}
+
+main div article#characters div#character-list ul li::after {
+    content: '';
+    width: calc(100%);
+    height: calc(100%);
+    border: 2px solid #d2d7dc;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+main div article#characters div#character-list ul li:hover {
+    /* border: 2px solid var(--hasu-logo-color); */
+    opacity: 0.7;
+    /* border-radius: 50%; */
+}
+
+main div article#characters div#character-list ul li.active:after {
+    /* background-color: #be1400; */
+    border: 2px solid var(--hasu-logo-color);
+}
+
+main div article#characters div#character-list ul li img {
+    /* overflow-clip-margin: content-box;
+    overflow: clip;
+    width: 60px;
+    height: 60px; */
+    /* transform: scale(); */
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    line-height: 0;
+    vertical-align: middle;
+    border: 0;
+}
+
+main div article#characters div#character-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow-x: scroll; */
+    /* flex-direction: row; */
+}
+
+main div article#characters div.card {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* align-items: center; */
+    /* flex-direction: row; */
+    /* align-items: stretch; */
+
+    /* flex: 1 1 20%; */
+    /* flex: 1 1 0;
+    width: 0px; */
+    /* height: 0px; */
+}
+
+main div article#characters div.card.active {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+main div article#characters div.card .title {
+    /* background-color: darkblue; */
+    text-align: center;
+    font-size: 2.5rem;
+
+    margin: 0px;
+}
+
+main div article#characters div.card .detail-character {
+    display: flex;
+}
+
+main div article#characters div.card .main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 20rem;
+    gap: 1.5rem;
+
+    /* Fade in Left */
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+main div article#characters img {
+    height: 300px;
+    transform: scale(1.5);
+}
+main div article#characters p {
+    font-size: 1.2rem;
+    /* text-align: justify; */
+}
+
+main div article#characters .side-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    /* background-color: #16ad69; */
+
+    /* Fade in Right */
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+main div article#characters .side-content img {
+    height: 100px;
+    transform: scale(1.5);
+    /* background-color: #be1400; */
+}
+
+main div article#characters .side-content table {
+    /* table-layout: fixed; */
+    width: 100%;
+    position: relative;
+
+    /* background: #16ad69; */
+    border-spacing: 10px;
+    border-collapse: separate;
+
+    /* font-size: 0.8rem; */
+}
+
+main div article#characters button {
+    padding: 0.8rem 1.2rem;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    margin-block-start: 1rem;
+
+    background-color: var(--hasu-logo-color);
+
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main div article#characters button:hover {
+    border: 3px solid var(--hasu-logo-color);
+    background-color: transparent;
+
+    color: var(--hasu-logo-color);
+}
+
+/* Color Per Character Card */
+/* Kaho */
+main div article#characters #kaho-hoshita .title {
+    color: var(--kaho-color);
+}
+
+main div article#characters #kaho-hoshita table th.table-header {
+    text-align: center;
+    background-color: var(--kaho-color);
+    color: white;
+}
+
+/* Kozue */
+main div article#characters #kozue-otomune .title {
+    color: var(--kozue-color);
+}
+
+main div article#characters #kozue-otomune table th.table-header {
+    text-align: center;
+    background-color: var(--kozue-color);
+    color: white;
+}
+
+/* Sayaka */
+main div article#characters #sayaka-murano .title {
+    color: var(--sayaka-color);
+}
+
+main div article#characters #sayaka-murano table th.table-header {
+    text-align: center;
+    background-color: var(--sayaka-color);
+    color: white;
+}
+
+/* Tsuzuri */
+main div article#characters #tsuzuri-yugiri .title {
+    color: var(--tsuzuri-color);
+}
+
+main div article#characters #tsuzuri-yugiri table th.table-header {
+    text-align: center;
+    background-color: var(--tsuzuri-color);
+    color: white;
+}
+
+/* Rurino */
+main div article#characters #rurino-osawa .title {
+    color: var(--rurino-color);
+}
+
+main div article#characters #rurino-osawa table th.table-header {
+    text-align: center;
+    background-color: var(--rurino-color);
+    color: white;
+}
+
+/* Megumi */
+main div article#characters #megumi-fujishima .title {
+    color: var(--megumi-color);
+}
+
+main div article#characters #megumi-fujishima table th.table-header {
+    text-align: center;
+    background-color: var(--megumi-color);
+    color: white;
+}
+
+/* Ginko */
+main div article#characters #ginko-momose .title {
+    color: var(--ginko-color);
+}
+
+main div article#characters #ginko-momose table th.table-header {
+    text-align: center;
+    background-color: var(--ginko-color);
+    color: white;
+}
+
+/* Kosuzu */
+main div article#characters #kosuzu-kachimachi .title {
+    color: var(--kosuzu-color);
+}
+
+main div article#characters #kosuzu-kachimachi table th.table-header {
+    text-align: center;
+    background-color: var(--kosuzu-color);
+    color: white;
+}
+
+/* Hime */
+main div article#characters #hime-anyoji .title {
+    color: var(--hime-color);
+}
+
+main div article#characters #hime-anyoji table th.table-header {
+    text-align: center;
+    background-color: var(--hime-color);
+    color: white;
+}
+
+/* Characters Modal */
+main div article#characters-modal {
+    /* display: grid; */
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 2rem;
+
+    justify-items: center;
+    align-items: center;
+
+    /* grid-template-rows: repeat(2, 1fr); */
+}
+
+/* Per Card */
+main div article#characters-modal .card {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    max-width: fit-content;
+}
+
+main div article#characters-modal .card h5 {
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    font-size: 1.8rem;
+    text-align: center;
+    transform: rotate(180deg);
+    margin: 0;
+
+    color: var(--kaho-color);
+}
+
+main div article#characters-modal .card img {
+    height: 250px;
+}
+
+/* Gap */
+div.school-bg {
+    margin-top: 10rem;
+    display: block;
+    height: 360px;
+    width: 100%;
+    /* left: 0; */
+    /* margin-left: calc(-100vw / 2 + 500px / 2); */
+    /* margin-right: calc(-100vw / 2 + 500px / 2); */
+    overflow: hidden;
+    background: url('../img/Yuigaoka_yt.webp') no-repeat center, #181c28;
+    background-size: cover;
+    /* position: absolute; */
+}
+
+/* Subunit */
+main div article#subunit {
+    display: flex;
+    flex-direction: column;
+
+    /* gap: 2rem; */
+
+    margin-bottom: 56px;
+}
+
+main div article#subunit > h2 {
+    text-align: center;
+    color: var(--hasu-logo-color);
+    font-size: 3em;
+}
+
+main div article#subunit .subunit-list {
+    display: none;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: repeat(2, 1fr); */
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    position: relative;
+
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+main div article#subunit .subunit-list--selected {
+    /* display: grid; */
+    display: flex;
+    position: relative;
+}
+
+main div article#subunit div .main-content {
+    /* width: 50%; */
+    /* grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: span 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 50%;
+}
+
+main div article#subunit div .main-content h5 {
+    /* background-color: #16ad69; */
+    color: var(--hasu-logo-color);
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+}
+
+main div article#subunit div .main-content p {
+    text-align: justify;
+}
+
+main div article#subunit div {
+    /* max-width: 500px; */
+}
+
+main div article#subunit div .img-container {
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    /* grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: span 1; */
+}
+
+main div article#subunit div .img-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Card */
+.card {
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Animation */
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInTop {
+    -webkit-animation-name: fadeInTop;
+    animation-name: fadeInTop;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+}
+
+.carousel__nav {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* background: darkolivegreen; */
+    text-align: center;
+    /* z-index: 55; */
+}
+
+.carousel__button {
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel__button--selected {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel__nav__arrow_right {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    margin-right: -20px;
+    font-size: 3em;
+    border-radius: 50%;
+    padding: 0;
+    background-color: #fff;
+    cursor: pointer;
+    color: var(--hasu-logo-color);
+}
+.carousel__nav__arrow_left {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    margin-left: -20px;
+    font-size: 3em;
+    border-radius: 50%;
+    /* padding: 15px; */
+    background-color: #fff;
+    color: var(--hasu-logo-color);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--hasu-logo-color);
+    padding: 10px;
+    bottom: 0;
+    color: white;
+}
+
+/* Aside */
+aside {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+
+    padding: 1rem 0 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+aside #source {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2rem;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* width: 100%; */
+}
+
+aside #source .main h2 {
+    color: var(--hasu-logo-color);
+}
+aside #source .main ul {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding: 0 1rem;
+    /* list-style-type: none; */
+}
+
+aside #source ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+aside #source #gambar {
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+}
+
+aside #source #gambar img {
+    height: 160px;
+    margin: auto;
+}
+
+aside #social-media {
+    background-color: var(--hasu-logo-color);
+    padding: 1px 20px;
+}
+
+aside #social-media ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+}
+
+/* aside #social-media ul li {
+    display: flex;
+    align-items: center;
+} */
+
+aside #social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+aside #social-media ul li a i {
+    font-size: 1.2rem;
+    /* display: none; */
+}
+aside #social-media ul li a svg {
+    font-size: 1.2rem;
+    /* display: none; */
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(54deg)
+        brightness(108%) contrast(101%);
+}
+
+aside #social-media ul li span {
+    font-size: 0.8em;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        /* position: relative; */
+        /* overflow: hidden; */
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr); */
+        justify-content: space-between;
+        padding: 16px 5%;
+    }
+
+    header.navbar-container div.logo img {
+        max-width: 80%;
+        max-height: auto;
+        width: 70%;
+        height: auto;
+    }
+
+    /* header.navbar-container .logo {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+        grid-row-start: 1;
+    }
+    header.navbar-container .nav-list-hamburger {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+    }
+
+    header.navbar-container .nav-list {
+        grid-row-start: 2;
+    } */
+
+    header.navbar-container nav#nav-list {
+        display: none;
+        right: 5%;
+        top: 0;
+        margin-top: 86px;
+        /* background-color: #e6007f; */
+        padding: 20px;
+        /* width: 30%; */
+        position: absolute;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        /* box-shadow: inset 0 -1px 0 0 rgba(var(--hasu-logo-color), 0.2); */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* backdrop-filter: blur(8px); */
+        background-color: #fff;
+
+        /* Animation */
+        -webkit-animation-duration: 0.6s;
+        animation-duration: 0.6s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    header.navbar-container nav#nav-list ul {
+        display: flex;
+        flex-direction: column;
+        /* align-items: right; */
+        /* right:0 */
+        justify-content: space-around;
+        align-items: end;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+    }
+
+    header.navbar-container nav#nav-list ul li {
+        /* background-color: #16ad69; */
+        /* Animation */
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 0.8s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    /* Hamburger */
+    header.navbar-container nav.nav-list-hamburger {
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        padding: 15px 10px;
+        border: 2px solid var(--hasu-logo-color);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    header.navbar-container nav.nav-list-hamburger span {
+        background-color: var(--hasu-logo-color);
+        width: 30px;
+        padding: 1px;
+        /* display: f; */
+    }
+
+    main div article#about {
+        width: 90%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* main div article#about img {
+        max-width: 100%;
+        max-height: 100%;
+    } */
+
+    main div article#about p main div article#characters {
+        /* grid-template-columns: 1fr; */
+        /* padding: 20px; */
+    }
+
+    main div article#characters div#character-card div.card.active {
+        /* grid-template-columns: 1fr; */
+        /* grid-template-rows: auto, repeat(2, 1fr); */
+        width: 90%;
+    }
+
+    /* main div article#characters div.card .title {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+    } */
+
+    main div article#characters div.card .detail-character {
+        flex-direction: column;
+    }
+
+    main div article#characters div.card .main-content {
+        /* justify-content: center; */
+        flex-direction: column;
+        width: 100%;
+        /* gap: 3rem; */
+        /* overflow: none; */
+    }
+    main div article#characters div.card .main-content img {
+        transform: scale(1.3);
+    }
+
+    main div article#characters div.card .side-content {
+        margin-top: 2em;
+    }
+
+    main div article#subunit .subunit-list {
+        /* display: none; */
+        /* grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr); */
+        flex-direction: column;
+        padding-bottom: 50px;
+        width: 90%;
+        margin: auto;
+    }
+
+    /* .carousel {
+    } */
+    main div article#subunit .subunit-list .main-content {
+        max-width: 100%;
+    }
+
+    main div article#subunit .subunit-list .img-container {
+    }
+
+    .carousel__nav__arrow_left {
+        margin-left: 10px;
+    }
+    .carousel__nav__arrow_right {
+        margin-right: 10px;
+    }
+
+    aside {
+        width: 90%;
+    }
+    aside #source {
+        /* width: 90%; */
+        flex-direction: column;
+        word-wrap: break-word;
+        font-size: 0.8em;
+    }
+
+    aside #source #gambar {
+        display: none;
+    }
+    aside #social-media ul li a span {
+        display: none;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
